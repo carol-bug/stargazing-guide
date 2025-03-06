@@ -46,12 +46,34 @@
 <body>
     <h1>Welcome to the Stargazing Guide 🌌</h1>
     <p>Explore the universe with us! Learn about celestial events, planets, and telescopes.</p>
+    <div class="facts">
+    <h2>🌠 Did You Know?</h2>
+    <p id="fact">Click below to learn a space fact!</p>
+    <button onclick="showFact()" class="btn">Show Fact</button>
+</div>
     
     <div class="container">
         <img src="https://source.unsplash.com/400x300/?space,stars" alt="Space Image">
         <br>
         <a href="https://www.nasa.gov" class="btn" target="_blank">Explore NASA</a>
     </div>
+    <script>
+    const facts = [
+        "Neutron stars are so dense that a sugar-cube-sized amount of material would weigh a billion tons on Earth!",
+        "A day on Venus is longer than a year on Venus!",
+        "There are more stars in the universe than grains of sand on all the Earth’s beaches.",
+        "The footprints on the Moon will stay there for millions of years.",
+        "Jupiter’s moon Ganymede is larger than Mercury!",
+        "Saturn’s rings are made of billions of ice particles.",
+        "One spoonful of a neutron star weighs about a billion tons!",
+        "Black holes can slow down time due to their immense gravity."
+    ];
+    
+    function showFact() {
+        const factIndex = Math.floor(Math.random() * facts.length);
+        document.getElementById("fact").innerText = facts[factIndex];
+    }
+</script>
 </body>
 </html>
 
