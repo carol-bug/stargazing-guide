@@ -7,7 +7,8 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #0a0a23;
+            background: url("https://source.unsplash.com/1600x900/?galaxy,stars") no-repeat center center fixed;
+            background-size: cover;
             color: white;
             text-align: center;
             padding: 20px;
@@ -18,6 +19,9 @@
         p {
             max-width: 600px;
             margin: auto;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 10px;
         }
         .btn {
             display: inline-block;
@@ -28,6 +32,8 @@
             font-size: 18px;
             border-radius: 5px;
             margin-top: 20px;
+            cursor: pointer;
+            border: none;
         }
         .btn:hover {
             background-color: #e6b800;
@@ -41,39 +47,43 @@
             border-radius: 10px;
             margin-top: 20px;
         }
+        .facts {
+            margin-top: 40px;
+        }
     </style>
 </head>
 <body>
     <h1>Welcome to the Stargazing Guide 🌌</h1>
     <p>Explore the universe with us! Learn about celestial events, planets, and telescopes.</p>
-    <div class="facts">
-    <h2>🌠 Did You Know?</h2>
-    <p id="fact">Click below to learn a space fact!</p>
-    <button onclick="showFact()" class="btn">Show Fact</button>
-</div>
     
     <div class="container">
-        <img src="https://source.unsplash.com/400x300/?space,stars" alt="Space Image">
+        <img src="https://source.unsplash.com/400x300/?moon,stars" alt="Space Image">
         <br>
         <a href="https://www.nasa.gov" class="btn" target="_blank">Explore NASA</a>
     </div>
+
+    <div class="facts">
+        <h2>🌠 Did You Know?</h2>
+        <p id="fact">Click below to learn a space fact!</p>
+        <button onclick="showFact()" class="btn">Show Fact</button>
+    </div>
+
     <script>
-    const facts = [
-        "Neutron stars are so dense that a sugar-cube-sized amount of material would weigh a billion tons on Earth!",
-        "A day on Venus is longer than a year on Venus!",
-        "There are more stars in the universe than grains of sand on all the Earth’s beaches.",
-        "The footprints on the Moon will stay there for millions of years.",
-        "Jupiter’s moon Ganymede is larger than Mercury!",
-        "Saturn’s rings are made of billions of ice particles.",
-        "One spoonful of a neutron star weighs about a billion tons!",
-        "Black holes can slow down time due to their immense gravity."
-    ];
-    
-    function showFact() {
-        const factIndex = Math.floor(Math.random() * facts.length);
-        document.getElementById("fact").innerText = facts[factIndex];
-    }
-</script>
+        const facts = [
+            "Neutron stars are so dense that a sugar-cube-sized amount of material would weigh a billion tons on Earth!",
+            "A day on Venus is longer than a year on Venus!",
+            "There are more stars in the universe than grains of sand on all the Earth’s beaches.",
+            "The footprints on the Moon will stay there for millions of years.",
+            "Jupiter’s moon Ganymede is larger than Mercury!",
+            "Saturn’s rings are made of billions of ice particles.",
+            "One spoonful of a neutron star weighs about a billion tons!",
+            "Black holes can slow down time due to their immense gravity."
+        ];
+        
+        function showFact() {
+            const factIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById("fact").innerText = facts[factIndex];
+        }
+    </script>
 </body>
 </html>
-
